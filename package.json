@@ -12,7 +12,7 @@
     "vant": "^4.6.2",
     "vue": "^3.3.4",
     "vue-router": "^4.2.2",
-    "vuetify": "^3.3.9"
+    "vuetify": "^3.3.10"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",

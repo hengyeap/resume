@@ -34,7 +34,7 @@ import HelloWorld from './components/HelloWorld.vue'
     <div>电话  ： 0134762838</div>
     <div>email ： kohhengyeap@gmail.com</div>
   </van-col>
-  <van-col span="19">
+  <van-col span="24">
   <van-collapse v-model="activeNames">
 
     <van-row>
@@ -93,8 +93,28 @@ import HelloWorld from './components/HelloWorld.vue'
       <van-col span="24">
     <div>语言</div>
   </van-col>
-    <van-col span="8">
-      <van-collapse-item title="英文" name="1">
+  <v-row
+      class="mb-12"
+      no-gutters
+    >  <v-col sm="6"
+        md="12">
+        <div>英文</div>
+          <div class="">
+            <div>听</div>
+          <van-progress pivot-text="听 80%"  :percentage="80" />
+        </div>
+        <div class="cat">
+          <div>写</div>
+          <van-progress pivot-text="写 80%"  :percentage="80" />
+        </div>
+        <div class="cat">
+          <div>说</div>
+          <van-progress pivot-text="说 80%"  :percentage="80" />
+          </div></v-col>
+        </v-row>
+
+    <van-col span="8" class="linebox">
+      <!-- <van-collapse-item title="英文" name="1"> -->
         <div>英文</div>
           <div class="">
             <div>听</div>
@@ -108,10 +128,10 @@ import HelloWorld from './components/HelloWorld.vue'
           <div>说</div>
           <van-progress pivot-text="说 80%"  :percentage="80" />
           </div>
-      </van-collapse-item>
+      <!-- </van-collapse-item> -->
     </van-col>
-    <van-col span="8">
-      <van-collapse-item title="中文" name="2">
+    <van-col span="8" class="linebox">
+      <!-- <van-collapse-item title="中文" name="2"> -->
           <div>中文</div>
           <div class="">
             <div>听</div>
@@ -125,10 +145,10 @@ import HelloWorld from './components/HelloWorld.vue'
             <div>说</div>
             <van-progress pivot-text="说 80%"  :percentage="80" />
             </div>
-      </van-collapse-item>
+      <!-- </van-collapse-item> -->
     </van-col>
-    <van-col span="8">
-      <van-collapse-item title="马来文" name="3">
+    <van-col span="8" class="linebox">
+      <!-- <van-collapse-item title="马来文" name="3"> -->
         <div>马来文</div>
         <div class="">
           <div>听</div>
@@ -142,7 +162,7 @@ import HelloWorld from './components/HelloWorld.vue'
           <div>说</div>
           <van-progress pivot-text="说 30%"  :percentage="30" />
         </div>
-      </van-collapse-item>
+      <!-- </van-collapse-item> -->
     </van-col>
   </van-row>
 
@@ -295,7 +315,10 @@ nav a {
 nav a:first-of-type {
   border: 0;
 }
-
+.linebox{
+  border: solid 1px ;
+  padding: 10px;
+}
 @media (min-width: 1024px) {
   header {
     display: flex;
